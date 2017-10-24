@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-datepicker",
+  "_cacheHeaders": {
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "main": "index",
+  "_source": "https://github.com/eternicode/bootstrap-datepicker",
+  "_target": "*",
+  "_originalSource": "https://github.com/eternicode/bootstrap-datepicker",
+  "_direct": true
+}

@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - db_classeurvirtuel@localhost" uuid="22e016b6-3600-41ea-8bb4-1848574ae7d0">
+    <database-info product="MySQL" version="5.6.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="db_classeurvirtuel">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="bd_boisdesbrigands"/>
+      <schema id="3" name="bd_joratjoie"/>
+      <schema id="4" name="bd_serveurcrisousite"/>
+      <schema id="5" name="information_schema"/>
+      <schema id="6" name="mysql"/>
+      <schema id="7" name="performance_schema"/>
+      <schema id="8" name="test"/>
+      <table id="9" parent="1" name="t_absence"/>
+      <table id="10" parent="1" name="t_classe"/>
+      <table id="11" parent="1" name="t_commentaire"/>
+      <table id="12" parent="1" name="t_cours"/>
+      <table id="13" parent="1" name="t_departement"/>
+      <table id="14" parent="1" name="t_eleve"/>
+      <table id="15" parent="1" name="t_entreprise"/>
+      <table id="16" parent="1" name="t_maclasse"/>
+      <table id="17" parent="1" name="t_maitredapprentissage"/>
+      <table id="18" parent="1" name="t_porte"/>
+      <table id="19" parent="1" name="t_professeur"/>
+      <table id="20" parent="1" name="t_representantlegal"/>
+      <table id="21" parent="1" name="t_salle"/>
+      <table id="22" parent="1" name="t_tardive"/>
+      <table id="23" parent="1" name="t_typeformation"/>
+      <table id="24" parent="1" name="t_coche"/>
+      <table id="25" parent="1" name="t_typecoche"/>
+      <table id="26" parent="1" name="t_oubligym"/>
+      <table id="27" parent="1" name="t_sante"/>
+      <table id="28" parent="1" name="t_remarqueeleve"/>
+      <column id="29" parent="9" name="id_absence">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="30" parent="9" name="abs_date">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="31" parent="9" name="abs_periode">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="32" parent="9" name="abs_commentaire">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="33" parent="9" name="abs_excuse">
+        <mandatory>1</mandatory>
+        <data-type>char(3)|0</data-type>
+        <default-expression>&apos;Non&apos;</default-expression>
+      </column>
+      <column id="34" parent="9" name="idx_eleve">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="35" parent="9" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="36" parent="9" name="idx_cours">
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="37" parent="9" name="idx_codebarre">
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="38" parent="9" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="39" parent="9" name="idx_codebarre">
+        <columns>idx_codebarre</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="40" parent="9" name="idx_cours">
+        <columns>idx_cours</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="41" parent="9" name="idx_eleve">
+        <columns>idx_eleve</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="42" parent="9" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="43" parent="9" name="PRIMARY">
+        <columns>id_absence</columns>
+        <primary>1</primary>
+      </key>
+      <column id="44" parent="10" name="id_classe">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="45" parent="10" name="cla_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="46" parent="10" name="cla_niveau">
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <column id="47" parent="10" name="cla_type">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="48" parent="10" name="cla_jourdecours">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="49" parent="10" name="idx_typeformation">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="50" parent="10" name="idx_departement">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="51" parent="10" name="cla_nom">
+        <columns>cla_nom</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="52" parent="10" name="idx_departement">
+        <columns>idx_departement</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="53" parent="10" name="idx_typeformation">
+        <columns>idx_typeformation</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="54" parent="10" name="PRIMARY">
+        <columns>id_classe</columns>
+        <primary>1</primary>
+      </key>
+      <key id="55" parent="10" name="cla_nom">
+        <columns>cla_nom</columns>
+        <underlying-index>cla_nom</underlying-index>
+      </key>
+      <column id="56" parent="11" name="id_commentaire">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="57" parent="11" name="com_contenu">
+        <data-type>text|0</data-type>
+      </column>
+      <column id="58" parent="11" name="com_date">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="59" parent="11" name="idx_matcode">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="60" parent="11" name="idx_professeur">
+        <mandatory>1</mandatory>
+        <data-type>smallint(6) unsigned|0</data-type>
+      </column>
+      <column id="61" parent="11" name="idx_classe">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <index id="62" parent="11" name="idx_classe">
+        <columns>idx_classe</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="63" parent="11" name="idx_matcode">
+        <columns>idx_matcode</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="64" parent="11" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="65" parent="11" name="PRIMARY">
+        <columns>id_commentaire</columns>
+        <primary>1</primary>
+      </key>
+      <column id="66" parent="12" name="id_cours">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="67" parent="12" name="cou_duree">
+        <mandatory>1</mandatory>
+        <data-type>smallint(6)|0</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="68" parent="12" name="cou_alternance">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="69" parent="12" name="cou_matcode">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="70" parent="12" name="cou_matlibelle">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="71" parent="12" name="cou_jour">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="72" parent="12" name="cou_heuredebut">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="73" parent="12" name="idx_professeur">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="74" parent="12" name="idx_salle">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="75" parent="12" name="idx_salle2">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="76" parent="12" name="idx_classe1">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="77" parent="12" name="idx_classe2">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="78" parent="12" name="idx_classe3">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="79" parent="12" name="idx_classe4">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="80" parent="12" name="idx_classe5">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="81" parent="12" name="idx_classe6">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="82" parent="12" name="temp_prenomprof">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <index id="83" parent="12" name="idx_classe">
+        <columns>idx_classe1</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="84" parent="12" name="idx_classe2">
+        <columns>idx_classe2</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="85" parent="12" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="86" parent="12" name="idx_salle">
+        <columns>idx_salle</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="87" parent="12" name="PRIMARY">
+        <columns>id_cours</columns>
+        <primary>1</primary>
+      </key>
+      <column id="88" parent="13" name="id_departement">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="89" parent="13" name="dep_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="90" parent="13" name="PRIMARY">
+        <columns>id_departement</columns>
+        <primary>1</primary>
+      </key>
+      <column id="91" parent="14" name="id_eleve">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="92" parent="14" name="id_codebarre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="93" parent="14" name="ele_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="94" parent="14" name="ele_prenom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="95" parent="14" name="ele_politesse">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="96" parent="14" name="ele_datedenaissance">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="97" parent="14" name="ele_numerodecontrat">
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="98" parent="14" name="ele_debutdeformation">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="99" parent="14" name="ele_findeformation">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="100" parent="14" name="ele_majeur">
+        <data-type>tinyint(1)|0</data-type>
+      </column>
+      <column id="101" parent="14" name="ele_Rue">
+        <data-type>varchar(60)|0</data-type>
+      </column>
+      <column id="102" parent="14" name="ele_npa">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="103" parent="14" name="ele_localite">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="104" parent="14" name="ele_canton">
+        <data-type>varchar(2)|0</data-type>
+      </column>
+      <column id="105" parent="14" name="ele_numeromobile">
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="106" parent="14" name="ele_mail">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="107" parent="14" name="ele_desavantage">
+        <data-type>varchar(6)|0</data-type>
+      </column>
+      <column id="108" parent="14" name="ele_dispenseecg">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="109" parent="14" name="ele_dispensebt">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="110" parent="14" name="ele_dispensesport">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="111" parent="14" name="ele_derogation">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="112" parent="14" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="113" parent="14" name="idx_entreprise">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="114" parent="14" name="idx_maitredapprentissage">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="115" parent="14" name="idx_representantlegal">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="116" parent="14" name="idx_classe">
+        <columns>idx_classe</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="117" parent="14" name="idx_entreprise">
+        <columns>idx_entreprise</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="118" parent="14" name="idx_maitredapprentissage">
+        <columns>idx_maitredapprentissage</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="119" parent="14" name="idx_representantlegal">
+        <columns>idx_representantlegal</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="120" parent="14" name="id_codebarre">
+        <columns>id_codebarre</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="121" parent="14" name="PRIMARY">
+        <columns>id_eleve</columns>
+        <primary>1</primary>
+      </key>
+      <column id="122" parent="15" name="id_entreprise">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="15" name="ent_nom">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="124" parent="15" name="ent_rue">
+        <data-type>varchar(60)|0</data-type>
+      </column>
+      <column id="125" parent="15" name="ent_npa">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="126" parent="15" name="ent_localite">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="127" parent="15" name="ent_canton">
+        <data-type>varchar(2)|0</data-type>
+      </column>
+      <column id="128" parent="15" name="ent_tel1">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="129" parent="15" name="ent_tel2">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="130" parent="15" name="ent_mobile1">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="131" parent="15" name="ent_mobile2">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="132" parent="15" name="ent_mail">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="133" parent="15" name="ent_fax">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="134" parent="15" name="PRIMARY">
+        <columns>id_entreprise</columns>
+        <primary>1</primary>
+      </key>
+      <column id="135" parent="16" name="id_maclasse">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="136" parent="16" name="mac_nom">
+        <data-type>varchar(120)|0</data-type>
+      </column>
+      <column id="137" parent="16" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="138" parent="16" name="idx_classe1">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="139" parent="16" name="idx_classe2">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="140" parent="16" name="idx_classe3">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="141" parent="16" name="idx_classe4">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="142" parent="16" name="idx_classe5">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <index id="143" parent="16" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="144" parent="16" name="PRIMARY">
+        <columns>id_maclasse</columns>
+        <primary>1</primary>
+      </key>
+      <column id="145" parent="17" name="id_maitredapprentissage">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="146" parent="17" name="mai_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="147" parent="17" name="mai_prenom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="148" parent="17" name="mai_tel1">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="149" parent="17" name="mai_tel2">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="150" parent="17" name="mai_mobile">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="151" parent="17" name="idx_entreprise">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="152" parent="17" name="idx_entreprise">
+        <columns>idx_entreprise</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="153" parent="17" name="PRIMARY">
+        <columns>id_maitredapprentissage</columns>
+        <primary>1</primary>
+      </key>
+      <column id="154" parent="18" name="id_porte">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="155" parent="18" name="por_date">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="156" parent="18" name="por_commentaire">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="157" parent="18" name="por_periode">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="158" parent="18" name="idx_eleve">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="159" parent="18" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="160" parent="18" name="idx_cours">
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="161" parent="18" name="idx_codebarre">
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="162" parent="18" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="163" parent="18" name="idx_codebarre">
+        <columns>idx_codebarre</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="164" parent="18" name="idx_cours">
+        <columns>idx_cours</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="165" parent="18" name="idx_eleve">
+        <columns>idx_eleve</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="166" parent="18" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="167" parent="18" name="PRIMARY">
+        <columns>id_porte</columns>
+        <primary>1</primary>
+      </key>
+      <column id="168" parent="19" name="id_professeur">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="169" parent="19" name="pro_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="170" parent="19" name="pro_prenom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="171" parent="19" name="pro_typedecours">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="172" parent="19" name="pro_codebarre">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="173" parent="19" name="pro_motdepasse">
+        <data-type>char(64)|0</data-type>
+      </column>
+      <column id="174" parent="19" name="pro_activedirectory">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <key id="175" parent="19" name="PRIMARY">
+        <columns>id_professeur</columns>
+        <primary>1</primary>
+      </key>
+      <column id="176" parent="20" name="id_representantlegal">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="177" parent="20" name="rep_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="178" parent="20" name="rep_prenom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="179" parent="20" name="rep_politesse">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="180" parent="20" name="rep_Rue">
+        <data-type>varchar(60)|0</data-type>
+      </column>
+      <column id="181" parent="20" name="rep_npa">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <column id="182" parent="20" name="rep_localite">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="183" parent="20" name="rep_tel1">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="184" parent="20" name="rep_tel2">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="185" parent="20" name="rep_numeromobile">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="186" parent="20" name="PRIMARY">
+        <columns>id_representantlegal</columns>
+        <primary>1</primary>
+      </key>
+      <column id="187" parent="21" name="id_salle">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="188" parent="21" name="sal_nom">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="189" parent="21" name="sal_capacite">
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <key id="190" parent="21" name="PRIMARY">
+        <columns>id_salle</columns>
+        <primary>1</primary>
+      </key>
+      <column id="191" parent="22" name="id_tardive">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="192" parent="22" name="tar_periode">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="193" parent="22" name="tar_commentaire">
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="194" parent="22" name="tar_date">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="195" parent="22" name="idx_eleve">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="196" parent="22" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="197" parent="22" name="idx_cours">
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="198" parent="22" name="idx_codebarre">
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="199" parent="22" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="200" parent="22" name="idx_codebarre">
+        <columns>idx_codebarre</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="201" parent="22" name="idx_cours">
+        <columns>idx_cours</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="202" parent="22" name="idx_eleve">
+        <columns>idx_eleve</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="203" parent="22" name="idx_professeur">
+        <columns>idx_professeur</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="204" parent="22" name="PRIMARY">
+        <columns>id_tardive</columns>
+        <primary>1</primary>
+      </key>
+      <column id="205" parent="23" name="id_typeformation">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="206" parent="23" name="typ_nom">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="207" parent="23" name="idx_departement">
+        <data-type>tinyint(4)|0</data-type>
+      </column>
+      <index id="208" parent="23" name="idx_departement">
+        <columns>idx_departement</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="209" parent="23" name="typ_nom">
+        <columns>typ_nom</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="210" parent="23" name="PRIMARY">
+        <columns>id_typeformation</columns>
+        <primary>1</primary>
+      </key>
+      <key id="211" parent="23" name="typ_nom">
+        <columns>typ_nom</columns>
+        <underlying-index>typ_nom</underlying-index>
+      </key>
+      <column id="212" parent="24" name="id_coche">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="213" parent="24" name="coc_commentaire">
+        <data-type>varchar(127)|0</data-type>
+      </column>
+      <column id="214" parent="24" name="idx_eleve">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="215" parent="24" name="idx_typecoche">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(3) unsigned|0</data-type>
+      </column>
+      <column id="216" parent="24" name="coc_creation">
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="217" parent="24" name="idx_eleve">
+        <columns>idx_eleve
+idx_typecoche</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="218" parent="24" name="PRIMARY">
+        <columns>id_coche</columns>
+        <primary>1</primary>
+      </key>
+      <column id="219" parent="25" name="id_typecoche">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="220" parent="25" name="typ_nom">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <key id="221" parent="25" name="PRIMARY">
+        <columns>id_typecoche</columns>
+        <primary>1</primary>
+      </key>
+      <column id="222" parent="26" name="id_oubligym">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="223" parent="26" name="oub_date">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="224" parent="26" name="oub_periode">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="225" parent="26" name="oub_commentaire">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="226" parent="26" name="idx_eleve">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="227" parent="26" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="228" parent="26" name="idx_cours">
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="229" parent="26" name="idx_codebarre">
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="230" parent="26" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="231" parent="26" name="idx_eleve">
+        <columns>idx_eleve
+idx_professeur
+idx_cours
+idx_codebarre
+idx_classe</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="232" parent="26" name="PRIMARY">
+        <columns>id_oubligym</columns>
+        <primary>1</primary>
+      </key>
+      <column id="233" parent="27" name="id_sante">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="234" parent="27" name="san_date">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="235" parent="27" name="san_periode">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="236" parent="27" name="san_commentaire">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="237" parent="27" name="idx_eleve">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="238" parent="27" name="idx_professeur">
+        <data-type>smallint(5) unsigned|0</data-type>
+      </column>
+      <column id="239" parent="27" name="idx_cours">
+        <data-type>int(10) unsigned|0</data-type>
+      </column>
+      <column id="240" parent="27" name="idx_codebarre">
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <column id="241" parent="27" name="idx_classe">
+        <data-type>smallint(6)|0</data-type>
+      </column>
+      <index id="242" parent="27" name="idx_eleve">
+        <columns>idx_eleve
+idx_professeur
+idx_cours
+idx_codebarre
+idx_classe</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="243" parent="27" name="PRIMARY">
+        <columns>id_sante</columns>
+        <primary>1</primary>
+      </key>
+      <column id="244" parent="28" name="id_remarqueeleve">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="245" parent="28" name="rem_message">
+        <mandatory>1</mandatory>
+        <data-type>varchar(127)|0</data-type>
+      </column>
+      <column id="246" parent="28" name="rem_datedebut">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="247" parent="28" name="rem_datefin">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="248" parent="28" name="idx_codebarre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)|0</data-type>
+      </column>
+      <index id="249" parent="28" name="not_datedebut">
+        <columns>rem_datedebut
+rem_datefin
+idx_codebarre</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="250" parent="28" name="PRIMARY">
+        <columns>id_remarqueeleve</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

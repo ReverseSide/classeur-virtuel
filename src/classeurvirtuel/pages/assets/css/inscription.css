@@ -1,0 +1,109 @@
+
+
+.student{
+    width:90%;
+    margin:auto;
+    font-size:20px;
+}
+.student_modif{
+    width:90%;
+    margin:auto;
+    font-size:20px;
+}
+.student_paie{
+    width:90%;
+    margin:auto;
+    font-size:20px;
+}
+
+
+
+.student::after{
+    content:'';
+    display:block;
+    height:2px;
+    background-color:black;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.student_modif::after{
+    content:'';
+    display:block;
+    height:2px;
+    background-color:black;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.student-container{
+    
+}
+
+.modif{
+    
+}
+
+.formulaire{
+    /*background-color: black;*/
+    width:100%;
+    height:70%;
+ 
+}
+
+.choixClasse{
+    margin-left: auto;
+    margin-right:auto;
+   /*background-color:black;*/
+    width:95%;
+   /* min-height:87%;*/
+    
+}
+.selection{
+    width:80%;
+    height:10%;
+    margin-top: 5%;
+}
+.boutonRecherche{
+    width:20%;
+    
+}
+.dropdown{
+ 
+
+}
+.sport{
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    background-color: aqua;
+}
+.photo{
+    
+   width: 60px;
+    height: 80px;
+    -webkit-border-radius: 100px / 160px;
+    -moz-border-radius:    100px / 160px; 
+    border-radius:         100px / 160px; 
+    
+}
+.menuInscription{
+    width:90%;
+    margin: auto;
+}
+
+#gauche{
+    width:50%;
+    margin:0 auto 0 auto;
+    float:left;
+    
+}
+
+#droite{
+    
+    width:50%;
+     margin:0 auto 0 auto;
+    float:right;
+    
+}

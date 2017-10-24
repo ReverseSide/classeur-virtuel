@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+	</head>
+	<body>
+		<a href="#" id="id-btn-dialog1">Modal Dialog</a>
+
+		<div id="dialog-message" class="hide">
+			<p>
+				This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+			</p>
+
+			<div class="hr hr-12 hr-double"></div>
+
+			<p>
+				Currently using
+				<b>36% of your storage space</b>
+				.
+			</p>
+		</div>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/jquery-ui-1.10.3.full.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+					_title: function(title) {
+						var $title = this.options.title || '&nbsp;'
+						if( ("title_html" in this.options) && this.options.title_html == true )
+							title.html($title);
+						else title.text($title);
+					}
+				}));
+			
+				$( "#id-btn-dialog1" ).on('click', function(e) {
+					e.preventDefault();
+			
+					var dialog = $( "#dialog-message" ).removeClass('hide').dialog({
+						modal: true,
+						title: "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='icon-ok'></i> jQuery UI Dialog</h4></div>",
+						title_html: true,
+						buttons: [ 
+							{
+								text: "Cancel",
+								"class" : "btn btn-xs",
+								click: function() {
+									$( this ).dialog( "close" ); 
+								} 
+							},
+							{
+								text: "OK",
+								"class" : "btn btn-primary btn-xs",
+								click: function() {
+									$( this ).dialog( "close" ); 
+								} 
+							}
+						]
+					});
+			
+					/**
+					dialog.data( "uiDialog" )._title = function(title) {
+						title.html( this.options.title );
+					};
+					**/
+				});
+			
+			});
+		</script>
+	</body>
+</html>
